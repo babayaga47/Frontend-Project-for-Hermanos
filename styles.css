@@ -1,0 +1,468 @@
+
+
+
+
+.image-container {
+    width: 100%;
+    height: 1075px;
+    position: relative;
+    border-bottom-left-radius: 140px;
+    
+    transition: background-image 0.5s;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Adjust the height of the gradient overlay */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    pointer-events: none; /* Ensures the overlay doesn't interfere with content */
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.navigation-bar {
+    position: absolute;
+    bottom: 20px;
+    right: 410px;
+    transform: translateX(-50%);
+}
+
+#prevButton, #nextButton {
+    padding: 5px 10px;
+    color: white;
+    font-size: 22px;
+    background-color: #218FCE;
+    border-radius: 10px;
+}
+
+.foot{
+    background-color: darkslategray;
+    height: 200px;
+}
+
+.head-bar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 5% 0;
+    position: relative;
+}
+
+
+/* Nav bar */
+
+.mail-div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    
+}
+
+.menu-toggle {
+    
+    border: 1px solid black;
+    background-color: rgb(243, 243, 243);    
+    cursor: pointer;
+    padding: 3px 5px;
+ 
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    position: absolute; 
+    z-index: 2;
+    width: 100%;
+    background-color: #333;
+    transform: translateX(-2800px);
+    transition: transform 0.8s;
+   
+}
+
+.menu2{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-color:  #333;
+    transform: translateY(-1000px);
+    transition: transform 0.8s;
+
+}
+
+.menu2.hidden {
+    transform: translateY(0);
+}
+
+
+
+/* Added style for the open class */
+.menu.open {
+   
+    transform: translateX(0);
+   
+}
+
+
+
+
+/* Bottom right div */
+
+.btm-r-div {
+    color: blue;
+    background-color: white;
+    border-top-left-radius: 10px;
+    padding: 10px 150px 10px 10px;
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.btm-r-div::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust the height of the gradient overlay */
+    background: linear-gradient(to bottom right, #66dec4, transparent, transparent);
+    pointer-events: none; /* Ensures the overlay doesn't interfere with content */
+}
+
+.btm-r-div h3 {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+}
+
+/* right side horizontal buttons */
+
+.req-callb {
+    transform: rotate(-90deg); /* Adjust the degree to tilt as per your preference */
+    transform-origin: right center;
+    
+    position: absolute;
+    right: 35px;
+    top: 300px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 0 15px;
+    background-color: purple;
+    color: white;
+}
+
+.enroll-now{
+
+    transform: rotate(-90deg); /* Adjust the degree to tilt as per your preference */
+    transform-origin: right center;
+    
+    position: absolute;
+    right: 35px;
+    top: 580px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 0 15px;
+    background-color: blue;
+    color: white;
+
+}
+
+.footr {
+    position: relative;
+    background-color: #66dec4;
+    height: max-content;
+   padding-bottom: 150px;
+}
+
+.oval-div {
+    width: 65%; /* Set a specific width for the div */
+  height: 100px; /* Set a specific height for the div */
+  border-radius: 100px; 
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+
+}
+
+.oval-left {
+    background-color: orange;
+    width: 60%;
+    height: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lft-txt {
+    margin: 10px 10px 10px 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.oval-left h3{
+    margin: 0;
+    color: white;
+    font-size: 25px;
+    
+}
+
+.thin-h3 {
+    font-weight: 100;
+}
+
+.oval-rite {
+    background-color: rgb(240, 17, 99);
+    width: 40%;
+    height: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    align-items: center; 
+    
+}
+
+.inside-grey {
+    height: 70%;
+    width: 80%;
+    background-color: rgba(223, 171, 183, 0.832);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-grey h3 {
+    margin-left: 8%;
+    font-size: 25px;
+}
+
+.fisrt-sector {
+   
+    margin-right: 15px;
+
+    
+}
+
+
+
+.HI {
+    width: 90%;
+}
+
+.firstcard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 10px
+    
+    
+    
+    
+}
+
+.firstcard h3 {
+    margin: 0;
+    font-weight: 100;
+}
+
+.bldh3 {
+    font-weight: 600 !important;
+    font-size: 1em;
+}
+
+
+.four-sec {
+    display: grid;
+    grid-template-columns:  minmax(340px, 1.5fr) repeat(3, minmax(153px, 1fr)); /* The first column has a minimum size of 340px and can expand up to 1.5fr. The remaining columns have a minimum size of 153px and can expand up to 1fr. */
+    padding: 80px 10% 0;
+    position: relative;
+    
+}
+
+
+
+
+
+.triple-section button {
+    position: absolute;
+    bottom: 25px;
+    margin-top: 10px;
+    padding: 7px 9px;
+    border-radius: 100px;
+    border-style: none;
+    color: white;
+
+}
+
+.blu{
+    background-color: #01367A;
+}
+
+.pink {
+    background-color: #D11C83;
+}
+
+.triple-section h3,h4 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+   
+}
+
+.ltfnt {
+  font-weight: 600 !important;
+  color: #01367A;
+}
+
+.redd {
+    color: red;
+    margin-right: 20px;
+}
+
+.close-tag{
+    height: 20px;
+    margin-bottom: 40%;
+
+}
+
+.close-w{
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+}
+
+.left-bar {
+    padding-right: 10%  ;
+  
+}
+
+.left-bar h2 {
+    color: white;
+}
+
+
+.right-bar-flex {
+    display: flex;
+}
+
+
+.img-sizze{
+ width: 250px ;
+}
+
+.nav-flx{
+    display: flex;
+    padding-top: 3%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.src-flex {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    align-items: center;
+    justify-content: center;
+   background-color: white;
+   position: relative;
+
+}
+.src-flex input {
+    width: 45%;
+    border-style: none;
+    border-bottom: 1.5px solid gray;
+}
+
+
+.trnd-flx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    
+}
+
+.trnd-flx a {
+    text-decoration: none;
+    color: #333;
+    background-color: lightgrey;
+    padding: 0  1%;
+
+}
+
+
+
+.rt-flx-1 {
+    margin-right: 120px;
+    font-weight: 500;
+    
+}
+
+.rt-flx-2 {
+    max-width: 400px;
+}
+
+.ins-logo {
+    width: 30px;
+}
+
+
+
+
+
+
+@media (max-width: 1100px) {
+
+.four-sec {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}    
+
+
+.triple-section button {
+    position: static;
+}
+
+.oval-left h3{
+font-size: 15px;
+}
+
+.inside-grey h3{
+    font-size: 15px;
+}
+    
+
+}
+
